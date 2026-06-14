@@ -1,32 +1,32 @@
 ﻿Public Class Form1
-    'the code runs when you click GBP to EUR button
+    'The code runs when you click GBP to EUR button
     Private Sub btnGbpToEur_Click(sender As Object, e As EventArgs) Handles btnGbpToEur.Click
-        'these are local variables which store the users input temporarily within this part of the code
+        'These are local variables which store the users input temporarily within this part of the code
         '"amount" refers to the money input, "rate" refers to the exchange rate.
         Dim amount As Decimal
         Dim rate As Decimal
 
-        'the validation here makes sure that all inputs are numerical
+        'The validation here makes sure that all inputs are numerical
         If Not Decimal.TryParse(txtAmount.Text, amount) OrElse Not Decimal.TryParse(txtRate.Text, rate) Then
             lblError.Text = "Please enter valid numbers"
             lblResult.Text = ""
             Exit Sub
         End If
 
-        'the validation here checks the input to make sure that all inputs are more than 0 as well as positive.
+        'The validation here checks the input to make sure that all inputs are more than 0 as well as positive.
         If amount <= 0 Or rate <= 0 Then
             lblError.Text = "Amount and rate must be greater than 0"
             lblResult.Text = ""
             Exit Sub
         End If
-        'multiplies the amount and rate together to calculate the converted amount.
+        'Multiplies the amount and rate together to calculate the converted amount.
         Dim result As Decimal = amount * rate
-        'displays the calculated result
+        'Displays the calculated result
         lblResult.Text = result.ToString("C2")
         lblError.Text = ""
     End Sub
 
-    'thecode runs when you click EUR to GBP button
+    'the code runs when you click EUR to GBP button
     Private Sub btnEurToGbp_Click(sender As Object, e As EventArgs) Handles btnEurToGbp.Click
         'these are local variables which store the users input temporarily within this part of the code
         '"amount" refers to the money input, "rate" refers to the exchange rate.
