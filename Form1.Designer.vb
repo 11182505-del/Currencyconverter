@@ -115,9 +115,9 @@ Partial Class Form1
         '
         'btnUpdateRate
         '
-        Me.btnUpdateRate.Location = New System.Drawing.Point(140, 243)
+        Me.btnUpdateRate.Location = New System.Drawing.Point(12, 12)
         Me.btnUpdateRate.Name = "btnUpdateRate"
-        Me.btnUpdateRate.Size = New System.Drawing.Size(218, 23)
+        Me.btnUpdateRate.Size = New System.Drawing.Size(159, 77)
         Me.btnUpdateRate.TabIndex = 9
         Me.btnUpdateRate.Text = "Change Exchange Rate"
         Me.btnUpdateRate.UseVisualStyleBackColor = True
